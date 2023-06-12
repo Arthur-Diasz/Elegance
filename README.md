@@ -20,4 +20,4 @@
 - Git e GitHub
 
 
-https://github.com/Arthur-Diasz/Elegance/blob/main/images/preview.jpeg
+
