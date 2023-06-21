@@ -4,7 +4,7 @@
  [🔗 Clique aqui para acessar](https://arthur-diasz.github.io/Elegance/)
   
   
-![PreviewPortfolio](https://github.com/Arthur-Diasz/Elegance/blob/main/images/preview.jpeg)
+![PreviewPortfolio](https://github.com/Arthur-Diasz/Elegance/blob/main/preview.jpeg)
   
   
   
