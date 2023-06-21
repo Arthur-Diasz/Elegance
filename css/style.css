@@ -11,11 +11,11 @@ https://www.tooplate.com/view/2133-moso-interior
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                #ffd74f;
-  --secondary-color:              #f65129;
+  --primary-color:                #404040;
+  --secondary-color:              #006B70;
   --section-bg-color:             #f9f9f9;
   --site-footer-bg-color:         #36363e;
-  --custom-btn-bg-color:          #00a05d;
+  --custom-btn-bg-color:          #C0C0C0;
   --dark-color:                   #000000;
   --p-color:                      #717275;
   --border-color:                 #e9eaeb;
@@ -47,6 +47,14 @@ https://www.tooplate.com/view/2133-moso-interior
   --font-weight-normal:           400;
   --font-weight-semibold:         600;
   --font-weight-bold:             700;
+}
+
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -560,6 +568,183 @@ strong {
   color: var(--white-color);
 }
 
+/*---------------------------------------
+  SERVIÇOS              
+-----------------------------------------*/
+
+#servicos {
+  text-align: center;
+  margin-top: 38px;
+}
+
+.card {
+  position: relative;
+  height: 24rem;
+  width: calc(90% / 3);
+  min-width: 22rem;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-box-shadow: 4px 4px 15px gray;
+  box-shadow: 4px 4px 15px gray;
+  border: none !important;
+}
+
+.card::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(35, 35, 35, 0.4);
+  pointer-events: none;
+  z-index: 99;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+.card:hover img {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.card .card-text-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 999;
+}
+
+.card .card-text-content p {
+  padding: 0 0.6rem;
+  font-size: 2.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 4px #444;
+  font-family: BerlinSansFBDemiBold;
+}
+
+
+
+
+
+/* Service Row
+----------------------- */
+.service-row {
+  position: relative;
+  width: 100%;
+}
+
+
+/* construction */
+.construction-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+
+/* interior */
+.interior-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.service-row-img {
+  height: 600px;
+  width: 660px;
+  -webkit-box-shadow: 4px 4px 15px gray;
+  box-shadow: 4px 4px 15px gray;
+}
+
+.service-row-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.service-row-text {
+  height: 420px;
+  width: 680px;
+  -webkit-box-shadow: 4px 4px 15px silver;
+  box-shadow: 4px 4px 15px silver;
+}
+
+
+/* construnction */
+.construction-text {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  -webkit-transform: translate(-90%, -50%);
+  -ms-transform: translate(-90%, -50%);
+  transform: translate(-90%, -50%);
+  background: #eee;
+  border-radius: 0.2rem;
+}
+
+
+/* interior */
+.interior-text {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translate(-10%, -50%);
+  -ms-transform: translate(-10%, -50%);
+  transform: translate(-10%, -50%);
+  background: #eee;
+  border-radius: 0.2rem;
+}
+
+.service-row-text h2 {
+  color: #444;
+  font-size: 2.7rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 2rem 2rem 0 2rem;
+}
+
+.service-row-text h2::first-letter {
+  color: var(--color-base);
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+.service-row-text p {
+  color: #444;
+  font-size: 1.1rem;
+  padding: 2rem 2rem 0 2rem;
+}
+
+.service-row-text p a {
+  padding: 0.6rem 1rem;
+  border: 2px solid var(--color-base);
+}
+
+
 
 /*---------------------------------------
   ABOUT              
@@ -587,8 +772,9 @@ strong {
 /*---------------------------------------
   FEATURED              
 -----------------------------------------*/
+
 .featured-section {
-  background-image: url('../images/empty-living-room-with-blue-sofa-plants-table-empty-white-wall-background-3d-rendering.jpg');
+  background-image: url('../img/slider/2.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -599,6 +785,233 @@ strong {
 }
 
 
+
+
+/* Project Gallery
+---------------------- */
+.gallery {
+  padding-bottom: 2rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-family: '';
+}
+
+.wrapper {
+  margin: 1.4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.wrapper .filter-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.filter-menu li {
+  margin: 0.2rem 0.4rem;
+  padding: 0.4rem 1rem;
+  color: var(--color-base);
+  cursor: pointer;
+  font-size: 1.4rem;
+  border: 3px solid var(--color-base);
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+
+}
+
+.filter-menu li:hover,
+.filter-menu li.active-menu {
+  color: #fff;
+  background: var(--color-base);
+}
+
+.gallery .filter-items {
+  margin-top: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.filter-items .filter-content {
+  position: relative;
+  margin: 0.3rem;
+  -ms-flex-preferred-size: calc(90% / 3);
+  flex-basis: calc(90% / 3);
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 320px;
+  height: 300px;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  -webkit-box-shadow: 4px 4px 20px gray;
+  box-shadow: 4px 4px 20px gray;
+  overflow: hidden;
+}
+
+
+/* active or delete contents */
+.filter-items .filter-content.deleteContents {
+  display: none;
+}
+
+.filter-items .filter-content.activeContents {
+  -webkit-animation: anim 0.3s ease-out forwards;
+  animation: anim 0.3s ease-out forwards;
+}
+
+@-webkit-keyframes anim {
+  from {
+      -webkit-transform: scale(0.2);
+      transform: scale(0.2);
+  }
+
+  to {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+}
+
+@keyframes anim {
+  from {
+      -webkit-transform: scale(0.2);
+      transform: scale(0.2);
+  }
+
+  to {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+}
+
+.filter-items .filter-content img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  border-radius: 0.4rem;
+}
+
+.filter-items .filter-content::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 34%, rgba(0, 0, 0, 0.9) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(34%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.9)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 34%, rgba(0, 0, 0, 0.9) 100%);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.filter-items .filter-content::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.filter-items .filter-content:hover::after {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.filter-items .filter-content .hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  width: 80%;
+  font-size: 1.1rem;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+  -ms-transform: translate(-50%, -50%) scale(0.8);
+  transform: translate(-50%, -50%) scale(0.8);
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.filter-items .filter-content:hover .hover-text {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.filter-items .filter-content .project-title-area {
+  padding: 0 2rem 0 2rem;
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.filter-items .filter-content .project-title-area p {
+  color: #fff;
+  font-size: 1.4rem;
+}
 /*---------------------------------------
   REVIEWS              
 -----------------------------------------*/
@@ -678,7 +1091,7 @@ strong {
 
 .reviews-bottom {
   background: var(--secondary-color);
-  background: linear-gradient(180deg, rgba(246,81,41,1) 0%, rgba(255,190,140,1) 100%);
+  background: linear-gradient(180deg, rgba(0, 107, 112,1) 0%, rgb(45, 120, 120) 100%);
   position: relative;
   padding: 10px 36px;
 }
